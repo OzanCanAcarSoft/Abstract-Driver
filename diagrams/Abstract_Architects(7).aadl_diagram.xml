@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="f389f3eb-5b15-49a0-9d70-572470a871fc" manual="true">
+    <element uuid="93af6802-c93e-4f81-8faa-9c0dc18a2763" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>Abstract_Driver</seg>
+      </bo>
+      <position x="341.81380462646484" y="258.0"/>
+      <size width="143.87499237060547" height="35.0"/>
+    </element>
+    <element uuid="a12b6291-7724-43ef-821e-50040ed6d868" manual="true">
+      <element uuid="488cd648-3a8b-4d37-a016-25106266ba9f" manual="true">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="325.8138122558594" y="275.5"/>
+          <point x="337.8138122558594" y="275.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>Abstract_Driver.Impl</seg>
+      </bo>
+      <position x="143.85677337646484" y="258.0"/>
+      <size width="177.95703887939453" height="35.0"/>
+    </element>
+    <element uuid="21a4634d-58df-4020-9402-da63d15192b1" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>Authorization_Service</seg>
+      </bo>
+      <position x="143.85677337646484" y="203.0"/>
+      <size width="186.88931274414062" height="35.0"/>
+    </element>
+    <element uuid="0735b722-f9c9-4159-876f-d92a02647c08" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>Data_Access</seg>
+      </bo>
+      <position x="143.85677337646484" y="38.0"/>
+      <size width="135.74349212646484" height="35.0"/>
+    </element>
+    <element uuid="3eddb14c-d2ed-4ad8-9c18-d1f0eb27e09c" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>Driver_Service</seg>
+      </bo>
+      <position x="299.6002731323242" y="38.0"/>
+      <size width="144.6171875" height="35.0"/>
+    </element>
+    <element uuid="87eb8e92-43a3-4beb-9882-bf7ddfc45016" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>Guidance_Service</seg>
+      </bo>
+      <position x="143.85677337646484" y="148.0"/>
+      <size width="166.140625" height="35.0"/>
+    </element>
+    <element uuid="784f2d06-f611-4fba-888a-0be9a60708cc" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>Passenger_Service</seg>
+      </bo>
+      <position x="329.99739837646484" y="148.0"/>
+      <size width="172.80728912353516" height="35.0"/>
+    </element>
+    <element uuid="802de9cf-3de8-4db1-9654-00da81b98d57" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>Payment_Service</seg>
+      </bo>
+      <position x="143.85677337646484" y="93.0"/>
+      <size width="161.6809844970703" height="35.0"/>
+    </element>
+    <element uuid="6e5e6922-6dff-4495-a96b-3844402655eb" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>Redundant_Spare</seg>
+      </bo>
+      <position x="325.53775787353516" y="93.0"/>
+      <size width="165.42447662353516" height="35.0"/>
+    </element>
+    <bo>
+      <seg>package</seg>
+      <seg>Abstract_Architects</seg>
+    </bo>
+    <position/>
+    <size width="514.8046798706055" height="305.0"/>
+  </element>
+  <config type="package" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>package</seg>
+      <seg>Abstract_Architects</seg>
+    </context>
+  </config>
+</diagram:Diagram>

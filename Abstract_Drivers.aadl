@@ -1,0 +1,96 @@
+package Abstract_Architects
+
+public
+	system Abstract_Driver
+	end Abstract_Driver;
+	
+	system Passenger_Service
+		features
+			data_input: out data port;
+			log_in_state: in data port;	
+			pay_req: out data port;
+			succ_inf: in data port;		
+	end Passenger_Service;
+	
+	system Driver_Service
+		features
+			nav_req: out data port;
+			nav_ret: in data port;			
+	end Driver_Service;
+	
+	system Data_Access
+		features
+			dat_req: in data port;
+			dat_ret: out data port;	
+			pay_sta: out data port;		
+			pay_con: in data port;
+			des_req: in data port;
+			des_ret: out data port;
+			get_info: in data port;
+			send_info: out data port;
+	end Data_Access;
+	
+	system Authorization_Service
+		features
+			dat_req: out data port;
+			dat_ret: in data port;	
+			data_input: in data port;	
+			log_in_state: out data port;	
+	end Authorization_Service;
+	
+	system Payment_Service
+		features
+			pay_req: in data port;
+			pay_con: out data port;	
+			pay_sta: in data port;
+			succ_inf: out data port;		
+	end Payment_Service;
+	
+	system Guidance_Service
+		features
+			nav_req: in data port;
+			nav_ret: out data port;
+			des_req: out data port;
+			des_ret: in data port;	
+	end Guidance_Service;
+	
+	system Redundant_Spare
+		features
+			get_info: in data port;
+			send_info: out data port;
+	end Redundant_Spare;
+	
+	system implementation Abstract_Driver.Impl
+	
+	
+		subcomponents
+			
+			Passenger_Service: system Passenger_Service;
+			Driver_Service: system Driver_Service;
+			Data_Access: system Data_Access;
+			Authorization_Service: system Authorization_Service;
+			Payment_Service: system Payment_Service;
+			Guidance_Service: system Guidance_Service;
+			Redundant_Spare: system Redundant_Spare;
+			
+		connections
+			conn1: port Passenger_Service.data_input -> Authorization_Service.data_input;
+			conn2: port Passenger_Service.pay_req -> Payment_Service.pay_req;
+			conn3: port Authorization_Service.log_in_state -> Passenger_Service.log_in_state;
+			conn4: port Payment_Service.succ_inf -> Passenger_Service.succ_inf;
+			conn5: port Driver_Service.nav_req -> Guidance_Service.nav_req;
+			conn6: port Guidance_Service.nav_ret -> Driver_Service.nav_ret;
+			conn7: port Authorization_Service.dat_req -> Data_Access.dat_req;
+			conn8: port Data_Access.dat_ret -> Authorization_Service.dat_ret;
+			conn9: port Data_Access.pay_sta -> Payment_Service.pay_sta;
+			conn10: port Payment_Service.pay_con -> Data_Access.pay_con;
+			conn11: port Guidance_Service.des_req -> Data_Access.des_req;
+			conn12: port Data_Access.des_ret -> Guidance_Service.des_ret;
+			conn13: port Data_Access.send_info -> Redundant_Spare.get_info;
+			conn14: port Redundant_Spare.send_info -> Data_Access.get_info;
+			
+			
+	end Abstract_Driver.Impl;
+	
+	
+end Abstract_Architects ;
